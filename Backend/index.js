@@ -11,6 +11,11 @@ const app = express();
 
 app.use(bodyParser.json())
 
+const userRoutes = require('./Routes/userRoutes');
+
+
+app.use('/user',userRoutes)
+
 
 app.get('/',(req,res)=>{
     res.send('hello world')
